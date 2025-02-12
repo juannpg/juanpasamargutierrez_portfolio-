@@ -3,8 +3,8 @@ const { titulo, descripcion, imagen, github, despliege } = Astro.props;
 import githubIcon from '../assets/github-icon-black.webp';
 import despliegueIcon from '../assets/despliegue-icon.webp';
 ---
-<div class="flex flex-col md:flex-row gap-5 rounded-lg bg-gray-700 p-2 relative items-center">
-  <img src={imagen} alt="Icono" class="w-auto rounded-md shadow-sm shadow-gray-950"/>
+<div class="flex flex-col lg:flex-row gap-5 rounded-lg bg-gray-700 p-2 relative items-center">
+  <img src={imagen} alt="Icono" class="rounded-md shadow-sm shadow-gray-950"/>
   <div class="w-full md:items-start items-center flex flex-col gap-3 text-left">
     <h2 class="text-white text-3xl">{titulo}</h2>
     <p class="text-gray-400 text-md">{descripcion}</p>
