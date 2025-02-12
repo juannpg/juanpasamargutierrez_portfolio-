@@ -1,14 +1,27 @@
 import { useState } from 'react';
+import mailIcon from '../assets/mail-icon.svg';
 
 export default function Mail() {
   const [modal, setModal] = useState<boolean>(false);
+
+  function showModal() {
+    setModal(true);
+    setTimeout(() => setModal(false), 3300);
+  }
   
   function copiarEmail(): void {
-    navigator.clipboard.writeText("juanpasamargutierrez@gmail.com")
-      .then(() => {
-        setModal(true)
-        setTimeout(() => setModal(false), 3300)
-      });
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText("juanpasamargutierrez@gmail.com")
+        .then(() => showModal());
+    } else {
+      const textArea = document.createElement("textarea");
+      textArea.value = "juanpasamargutierrez@gmail.com";
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      showModal();
+    }
   }
 
   return (
@@ -22,8 +35,8 @@ export default function Mail() {
       </div>
       
 
-      <img role="button" tabIndex={0} src="/src/assets/mail-icon.svg" alt="Mail Icon" className="w-11 cursor-pointer"
-        onClick={() => copiarEmail()}
+      <img role="button" tabIndex={0} src={mailIcon.src} alt="Mail Icon" className="w-11 cursor-pointer"
+        onClick={copiarEmail}
       />
     </>
   );

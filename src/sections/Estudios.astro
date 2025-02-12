@@ -1,11 +1,14 @@
 ---
 import Item from '../components/Item.astro';
+import dawIcon from '../assets/daw-icon.svg';
+import bachiIcon from '../assets/bachi-icon.webp';
+import esoIcon from '../assets/eso-icon.webp';
 ---
 <section class="flex flex-col text-left gap-2">
   <h1 class="text-white text-4xl">Estudios</h1>
   <div class="flex flex-col gap-2">
-    <Item titulo="Desarrollo de Aplicaciones Web" lugar="CPIFP Los Enlaces" fechaInicio="2024" fechaFin="2026" icono="daw-icon.svg"/>
-    <Item titulo="Bachillerato científico y tecnológico" lugar="IES Ángel Sanz Briz" fechaInicio="2022" fechaFin="2024" icono="bachi-icon.webp"/>
-    <Item titulo="Educación Secundaria Obligatoria" lugar="IES Ángel Sanz Briz" fechaInicio="2018" fechaFin="2022" icono="eso-icon.webp"/>
+    <Item titulo="G.S. Desarrollo de Aplicaciones Web" lugar="CPIFP Los Enlaces" fechaInicio="2024" fechaFin="2026" icono={dawIcon.src}/>
+    <Item titulo="Bachillerato científico y tecnológico" lugar="IES Ángel Sanz Briz" fechaInicio="2022" fechaFin="2024" icono={bachiIcon.src}/>
+    <Item titulo="Educación Secundaria Obligatoria" lugar="IES Ángel Sanz Briz" fechaInicio="2018" fechaFin="2022" icono={esoIcon.src}/>
   </div>
 </section>
