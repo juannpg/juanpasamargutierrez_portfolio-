@@ -6,5 +6,12 @@ const { titulo, descripcion, imagen, github, despliege } = Astro.props;
   <div class={`w-full flex flex-col text-left`}>
     <h2 class="text-white text-3xl">{titulo}</h2>
     <p class="text-gray-400 text-md">{descripcion}</p>
+
+    <div>
+      <button class="h-11 flex flex-row gap-1 items-center bg-white shadow-sm shadow-white p-2 rounded-lg">
+        <img src="/src/assets/github-icon-black.webp" alt="Icono" class="h-5 mr-2"/>
+        Repositorio
+      </button>
+    </div>
   </div>
 </div>
