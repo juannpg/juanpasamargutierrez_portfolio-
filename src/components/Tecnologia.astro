@@ -3,7 +3,7 @@ const { nombre, icono, subtitulo, repositorio }  = Astro.props;
 import githubIcon from '/src/assets/github-icon-black.webp'
 ---
 
-<div class="w-full relative flex flex-row gap-2 items-center rounded-lg bg-gray-700 p-2">
+<div class="w-full relative flex flex-row gap-2 items-center md:rounded-lg bg-gray-800 p-4 md:p-2 border-b border-white last:border-none md:border-none">
   <img src={icono} alt="Icono" class="rounded-md h-18"/>
   <div class="flex flex-row items-center text-left">
     <div>

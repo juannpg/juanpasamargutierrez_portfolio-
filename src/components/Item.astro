@@ -2,7 +2,7 @@
 const { titulo, lugar, fechaInicio, fechaFin, icono }  = Astro.props;
 ---
 
-<div class="md:w-[35vw] flex flex-row gap-2 items-center rounded-lg bg-gray-700 p-2">
+<div class="md:w-[35vw] flex flex-row gap-2 items-center md:rounded-lg bg-gray-800 p-4 md:p-2 border-b border-white last:border-none md:border-none">
   <img src={icono} alt="Icono" class="rounded-md h-22"/>
   <div class="flex flex-col text-left">
     <h2 class="text-white text-2xl">{titulo}</h2>
