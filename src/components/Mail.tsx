@@ -26,7 +26,7 @@ export default function Mail() {
 
   return (
     <>
-      <div className="w-80 flex justify-center items-center bg-gray-300 rounded-lg text-black fixed top-10 p-2 z-10 transition-all duration-500 ease-in-out"
+      <div className="w-80 flex justify-center items-center bg-[var(--subtitle-2)] rounded-lg text-[var(--black)] fixed top-10 p-2 z-10 transition-all duration-500 ease-in-out"
         style={{
           opacity: modal ? '0.95' : '0'
         }}

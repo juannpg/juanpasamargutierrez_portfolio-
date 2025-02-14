@@ -1,7 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background-color-black: rgb(7, 6, 28);
+  --background-color: rgb(7, 6, 28);
+  --footer-bg: rgb(2, 2, 8);
 
-  --footer-bg-black: rgb(2, 2, 8);
+  --item-bg: #1e2939;
+  --icon-bg: #6a7282;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --subtitle-1: #99a1af;
+  --subtitle-2: #d1d5dc;
+
+  --star-blue: #64b5f6;
+}
+
+@media (prefers-color-scheme: white) {
+  :root {
+  }
 }
