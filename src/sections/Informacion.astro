@@ -2,7 +2,8 @@
 import Estudios from "./Estudios.astro";
 import Experiencia from "./Experiencia.astro";
 ---
-<section class="flex md:flex-row w-[100vw] md:w-[66vw] justify-center flex-col gap-[1vw]">
+<section class="flex md:flex-row w-[100vw] md:w-[66vw] md:items-start items-center flex-col md:gap-[1vw]">
   <Estudios />
+  <hr class="md:hidden w-[60vw] border border-[var(--white)] opacity-40 mt-[5vh]"/>
   <Experiencia />
 </section>

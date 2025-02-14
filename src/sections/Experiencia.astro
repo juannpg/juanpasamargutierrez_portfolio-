@@ -1,10 +1,10 @@
 ---
 import Item from '../components/Item.astro';
-import NoExperiencia from '../components/NoExperiencia.astro';
+import missing from '../assets/missing-icon.webp';
 ---
-  <section class="w-full flex flex-col md:text-left md:gap-2">
+<section class="w-full flex flex-col md:text-left md:gap-2">
   <h1 class="text-[var(--white)] text-4xl ml-4 md:ml-0 mb-[5vh] md:mb-0 md:mt-0 mt-[5vh]">Experiencia</h1>
   <div class="flex flex-col gap-2">
-    <NoExperiencia />
+    <Item titulo="404 | No Encontrado" lugar="por ahora..." fechaInicio="20??" fechaFin="20??" icono={missing.src}/>
   </div>
 </section>
