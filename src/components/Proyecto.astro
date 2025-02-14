@@ -1,6 +1,7 @@
 ---
 const { titulo, descripcion, imagen, github, despliege } = Astro.props;
-import githubIcon from '../assets/github-icon-black.webp';
+import githubWhite from '../assets/github-icon-white.svg';
+import githubBlack from '../assets/github-icon-black.svg';
 import despliegueIcon from '../assets/despliegue-icon.webp';
 ---
 <div class="flex flex-col lg:flex-row gap-5 md:rounded-lg bg-[var(--item-bg)] p-4 md:p-2 relative items-center border-b border-[var(--white)] last:border-none md:border-none">
@@ -10,12 +11,15 @@ import despliegueIcon from '../assets/despliegue-icon.webp';
     <p class="text-[var(--subtitle-2)] text-md">{descripcion}</p>
 
     <div class="flex flex-wrap gap-2 md:bottom-2">
-      <a href={github} class="h-11 w-35 flex flex-row gap-1 items-center bg-[var(--white)] p-2 rounded-lg cursor-pointer" rel="noopener" target="_blank">
-        <img src={githubIcon.src} alt="Icono" class="h-5 mr-2"/>
+      <a href={github} class="h-11 flex flex-row gap-1 items-center bg-[var(--white)] p-2 rounded-lg cursor-pointer text-[var(--black)]" rel="noopener" target="_blank">
+        <picture>
+          <source srcset={githubBlack.src} media="(prefers-color-scheme: dark)" />
+          <img src={githubWhite.src} alt="Icono" class="h-5"/>
+        </picture>
         Repositorio
       </a>
-      <a href={despliege} class="h-11 w-35 flex flex-row gap-1 items-center bg-[var(--star-blue)] p-2 rounded-lg cursor-pointer" rel="noopener" target="_blank">
-        <img src={despliegueIcon.src} alt="Icono" class="h-5 mr-2"/>
+      <a href={despliege} class="h-11 flex flex-row gap-1 items-center bg-[var(--star-blue)] p-2 rounded-lg cursor-pointer text-[var(--star-blue-text)]" rel="noopener" target="_blank">
+        <img src={despliegueIcon.src} alt="Icono" class="h-5"/>
         Despliegue
       </a>
     </div>

@@ -1,6 +1,7 @@
 ---
 const { nombre, icono, subtitulo, repositorio }  = Astro.props;
-import githubIcon from '/src/assets/github-icon-black.webp'
+import githubWhite from '/src/assets/github-icon-white.svg'
+import githubBlack from '/src/assets/github-icon-black.svg'
 ---
 
 <div class="w-full relative flex flex-row gap-2 items-center md:rounded-lg bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none">
@@ -11,8 +12,11 @@ import githubIcon from '/src/assets/github-icon-black.webp'
       <p class="text-[var(--subtitle-1)] text-sm">{subtitulo}</p>
     </div>
     {repositorio && <a href={repositorio} class="absolute md:right-2 right-4 h-11 flex flex-row gap-1 items-center bg-[var(--white)] p-2 rounded-lg cursor-pointer" rel="noopener" target="_blank">
-      <img src={githubIcon.src} alt="Icono" class="h-5"/>
-      <span class="hidden lg:inline">Repositorio</span>
+      <picture>
+        <source srcset={githubBlack.src} media="(prefers-color-scheme: dark)" />
+        <img src={githubWhite.src} alt="Icono" class="h-5"/>
+      </picture>
+      <span class="hidden lg:inline text-[var(--black)]">Repositorio</span>
     </a>}
   </div>
 </div>

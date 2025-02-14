@@ -14,9 +14,21 @@
   --subtitle-2: #d1d5dc;
 
   --star-blue: #64b5f6;
+  --star-blue-text: #000000;
 }
 
-@media (prefers-color-scheme: white) {
+@media (prefers-color-scheme: light) {
   :root {
+    --background-color: rgb(245, 245, 255); /* Fondo claro */
+    --footer-bg: rgb(230, 230, 245); /* Fondo del footer más oscuro pero claro */
+  
+    --item-bg: #e3e8f0; /* Fondo de los ítems en un gris azulado suave */
+    --icon-bg: #8c94a3; /* Color de los íconos en un gris más oscuro */
+  
+    --white: #000000; /* Blanco se mantiene igual */
+    --black: #ffffff; /* Negro se mantiene igual */
+  
+    --subtitle-1: #606974; /* Texto secundario más oscuro para mejor legibilidad en fondo claro */
+    --subtitle-2: #4a5568; /* Texto aún más oscuro para subtítulos destacados */
   }
 }

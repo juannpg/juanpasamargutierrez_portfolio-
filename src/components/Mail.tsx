@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import mailIcon from '../assets/mail-icon.svg';
+import mailIconWhite from '../assets/mail-icon-white.svg';
+import mailIconBlack from '../assets/mail-icon-black.svg';
 
 export default function Mail() {
   const [modal, setModal] = useState<boolean>(false);
@@ -34,10 +35,12 @@ export default function Mail() {
         <p>Email copiado al portapapeles</p>
       </div>
       
-
-      <img role="button" tabIndex={0} src={mailIcon.src} alt="Mail Icon" className="w-11 cursor-pointer"
-        onClick={copiarEmail}
-      />
+      <picture>
+        <source srcSet={mailIconWhite.src} media="(prefers-color-scheme: dark)" />
+        <img role="button" tabIndex={0} src={mailIconBlack.src} alt="Mail Icon" className="w-11 cursor-pointer"
+          onClick={copiarEmail}
+        />
+      </picture>
     </>
   );
 }

@@ -1,7 +1,9 @@
 ---
+import linkedinWhite from '../assets/linkedin-icon-white.svg';
+import linkedinBlack from '../assets/linkedin-icon-black.svg';
+import githubWhite from '../assets/github-icon-white.svg';
+import githubBlack from '../assets/github-icon-black.svg';
 import Mail from '../components/Mail.tsx';
-import linkedinIcon from '../assets/linkedin-icon.svg';
-import githubIcon from '../assets/github-icon.svg';
 ---
 
 <section class="p-10">
@@ -10,11 +12,19 @@ import githubIcon from '../assets/github-icon.svg';
 
   <div class="flex flex-row justify-center items-center gap-2 mt-5">
     <a href="https://www.linkedin.com/in/juan-pasamar-guti%C3%A9rrez-273b4b335/" rel="noopener" target="_blank">
-      <img src={linkedinIcon.src} alt="Linkedin Icon" class="w-11"/>
+      <picture>
+        <source srcset={linkedinWhite.src} media="(prefers-color-scheme: dark)" />
+        <img src={linkedinBlack.src} alt="Linkedin Icon" class="w-11"/>
+      </picture>
     </a>
+
     <Mail client:load/>
+
     <a href="https://github.com/juannpg" rel="noopener" target="_blank">
-      <img src={githubIcon.src} alt="Github Icon" class="w-11"/>
+      <picture>
+        <source srcset={githubWhite.src} media="(prefers-color-scheme: dark)" />
+        <img src={githubBlack.src} alt="Github Icon" class="w-11"/>
+      </picture>
     </a>
   </div>
 </section>
