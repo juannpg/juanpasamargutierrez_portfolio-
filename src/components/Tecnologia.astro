@@ -2,6 +2,11 @@
 const { nombre, icono, subtitulo, repositorio }  = Astro.props;
 import githubWhite from '/src/assets/github-icon-white.svg'
 import githubBlack from '/src/assets/github-icon-black.svg'
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="w-full relative flex flex-row gap-2 items-center md:rounded-lg md:bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none">
@@ -16,7 +21,7 @@ import githubBlack from '/src/assets/github-icon-black.svg'
         <source srcset={githubBlack.src} media="(prefers-color-scheme: dark)" />
         <img src={githubWhite.src} alt="Icono" class="h-5"/>
       </picture>
-      <span class="hidden lg:inline text-[var(--black)]">Repositorio</span>
+      <span class="hidden lg:inline text-[var(--black)]">{t('utils.repositorio')}</span>
     </a>}
   </div>
 </div>

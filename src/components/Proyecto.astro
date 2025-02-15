@@ -3,6 +3,11 @@ const { titulo, descripcion, imagen, github, despliege } = Astro.props;
 import githubWhite from '../assets/github-icon-white.svg';
 import githubBlack from '../assets/github-icon-black.svg';
 import despliegueIcon from '../assets/despliegue-icon.webp';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <div class="flex flex-col lg:flex-row gap-5 md:rounded-lg md:bg-[var(--item-bg)] p-4 pt-0 pb-0 md:p-2 relative items-center border-b border-[var(--white)] last:border-none md:border-none">
   <img src={imagen} alt="Icono" class="rounded-md shadow-sm shadow-gray-950"/>
@@ -16,11 +21,11 @@ import despliegueIcon from '../assets/despliegue-icon.webp';
           <source srcset={githubBlack.src} media="(prefers-color-scheme: dark)" />
           <img src={githubWhite.src} alt="Icono" class="h-5"/>
         </picture>
-        Repositorio
+        {t('utils.repositorio')}
       </a>
       <a href={despliege} class="h-11 flex flex-row gap-1 items-center bg-[var(--star-blue)] p-2 rounded-lg cursor-pointer text-[var(--star-blue-text)]" rel="noopener" target="_blank">
         <img src={despliegueIcon.src} alt="Icono" class="h-5"/>
-        Despliegue
+        {t('utils.despliegue')}
       </a>
     </div>
   </div>

@@ -2,7 +2,9 @@ import { useState } from 'react';
 import mailIconWhite from '../assets/mail-icon-white.svg';
 import mailIconBlack from '../assets/mail-icon-black.svg';
 
-export default function Mail() {
+
+
+export default function Mail({MailTitulo}:{MailTitulo: string}) {
   const [modal, setModal] = useState<boolean>(false);
 
   function showModal() {
@@ -32,7 +34,7 @@ export default function Mail() {
           opacity: modal ? '0.95' : '0'
         }}
       >
-        <p>Email copiado al portapapeles</p>
+        <p>{MailTitulo}</p>
       </div>
       
       <picture>

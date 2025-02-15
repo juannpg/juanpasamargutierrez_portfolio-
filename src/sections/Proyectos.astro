@@ -1,8 +1,13 @@
 ---
 import Proyecto from "../components/Proyecto.astro"
 import rapphoneIcon from '../assets/rapphone-icon.webp';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <section class="md:w-[66vw] w-[87vw] flex flex-col gap-2">
-  <h1 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh]">Proyectos Personales</h1>
-  <Proyecto titulo="Web RapPhone" descripcion="Para un proyecto en grupo realicé la página web de un grupo de radio llamado RapPhone. Debimos usar HTML, CSS y JS vanilla para ello. Lo más destacable fue el backend, donde utilizamos Cloud Funcitons de Firebase para hacer distintas solicitudes a la API de Twitch, Spotify, y utilizar el paquete de NPM de Gemini AI" imagen={rapphoneIcon.src} github="https://github.com/juannpg/rapphone" despliege="https://rapphone.vercel.app"/>
+  <h1 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh]">{t('proyectos.titulo')}</h1>
+  <Proyecto titulo={t('proyectos.primero.titulo')} descripcion={t('proyectos.primero.descripcion')} imagen={rapphoneIcon.src} github="https://github.com/juannpg/rapphone" despliege="https://rapphone.vercel.app"/>
 </section>
