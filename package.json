@@ -6,8 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "i18n": "npx astro-i18next generate"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
@@ -15,8 +14,6 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "astro": "^5.2.5",
-    "astro-i18next": "^1.0.0-beta.13",
-    "i18next": "^22.4.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.6"
