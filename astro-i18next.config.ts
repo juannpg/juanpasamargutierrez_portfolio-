@@ -2,4 +2,10 @@
 export default {
   defaultLocale: "es",
   locales: ["es", "en"],
+  baseLanguage: "es",
+  i18nextServer: {
+    backend: {
+      loadPath: './public/locales/{{lng}}/{{ns}}.json',
+    },
+  },
 };
