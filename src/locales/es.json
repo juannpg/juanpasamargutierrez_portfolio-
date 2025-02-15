@@ -1,0 +1,53 @@
+{
+  "estudios": {
+    "titulo": "Estudios",
+    "primero": {
+      "titulo": "GS. Desarrollo de Aplicaciones Web",
+      "lugar": "CPIFP Los Enlaces",
+      "fechaInicio": "2024",
+      "fechaFin": "2026"
+    },
+    "segundo": {
+      "titulo": "Bachillerato científico y tecnológico",
+      "lugar": "IES Ángel Sanz Briz",
+      "fechaInicio": "2022",
+      "fechaFin": "2024"
+    },
+    "tercero": {
+      "titulo": "Educación Secundaria Obligatoria",
+      "lugar": "IES Ángel Sanz Briz",
+      "fechaInicio": "2018",
+      "fechaFin": "2022"
+    }
+  },
+  "experiencia": {
+    "titulo": "Experiencia",
+    "primero": {
+      "titulo": "404 | No Encontrado",
+      "lugar": "por ahora...",
+      "fechaInicio": "20??",
+      "fechaFin": "20??"
+    }
+  },
+  "hero": {
+    "subtitulo": "Desarrollador Web | Frontend & Backend"
+  },
+  "proyectos": {
+    "titulo": "Proyectos Personales",
+    "primero": {
+      "titulo": "Web RapPhone",
+      "descripcion": "Para un proyecto en grupo realicé la página web de un grupo de radio llamado RapPhone. Debimos usar HTML, CSS y JS vanilla para ello. Lo más destacable fue el backend, donde utilizamos Cloud Funcitons de Firebase para hacer distintas solicitudes a la API de Twitch, Spotify, y utilizar el paquete de NPM de Gemini AI"
+    }
+  },
+  "tecnologias": {
+    "titulo": "Tecnologías y conocimientos",
+    "subtituloAstro": "¡Esta web!"
+  },
+  "mail": {
+    "titulo": "Email copiado al portapapeles"
+  },
+  "utils": {
+    "repositorio": "Repositorio",
+    "despliegue": "Despliegue"
+  }
+}
