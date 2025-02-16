@@ -1,4 +1,6 @@
 ---
+import Analytics from '@vercel/analytics/astro';
+
 import { getLangFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,6 +13,7 @@ const lang = getLangFromUrl(Astro.url);
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Juan Pasamar | Dev</title>
+    <Analytics />
 	</head>
 	<body>
 		<slot />
