@@ -50,7 +50,7 @@ export const ui = {
     "estudios.tercero.lugar": "IES Ángel Sanz Briz",
     "estudios.tercero.fechaInicio": "2018",
     "estudios.tercero.fechaFin": "2022",
-    "experiencia.titulo": "Experience",
+    "experiencia.titulo": "Experiencia",
     "experiencia.primero.titulo": "404 | No Encontrado",
     "experiencia.primero.lugar": "por ahora...",
     "experiencia.primero.fechaInicio": "20??",
