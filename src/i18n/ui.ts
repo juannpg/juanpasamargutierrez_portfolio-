@@ -1,7 +1,21 @@
+import reinoUnido from '../assets/reino-unido.webp';
+import espana from '../assets/espana.webp';
+import francia from '../assets/francia.webp';
+import alemania from '../assets/alemania.webp';
+
 export const languages = {
   en: "English",
   es: "Español",
+  fr: "Français",
+  de: "Deutsch",
 };
+
+export const images = {
+  en: reinoUnido.src,
+  es: espana.src,
+  fr: francia.src,
+  de: alemania.src,
+}
 
 export const defaultLang = "en";
 
@@ -65,5 +79,65 @@ export const ui = {
     "mail.titulo": "Email copiado al portapapeles",
     "utils.repositorio": "Repositorio",
     "utils.despliegue": "Despliegue",
+  },
+  fr: {
+    "estudios.titulo": "Formation",
+    "estudios.primero.titulo": "BTS. Développement d'applications web",
+    "estudios.primero.lugar": "CPIFP Los Enlaces",
+    "estudios.primero.fechaInicio": "2024",
+    "estudios.primero.fechaFin": "2026",
+    "estudios.segundo.titulo": "Baccalauréat scientifique et technologique",
+    "estudios.segundo.lugar": "IES Ángel Sanz Briz",
+    "estudios.segundo.fechaInicio": "2022",
+    "estudios.segundo.fechaFin": "2024",
+    "estudios.tercero.titulo": "Lycée",
+    "estudios.tercero.lugar": "IES Ángel Sanz Briz",
+    "estudios.tercero.fechaInicio": "2018",
+    "estudios.tercero.fechaFin": "2022",
+    "experiencia.titulo": "Expérience",
+    "experiencia.primero.titulo": "404 | Non Trouvé",
+    "experiencia.primero.lugar": "pour le moment...",
+    "experiencia.primero.fechaInicio": "20??",
+    "experiencia.primero.fechaFin": "20??",
+    "hero.subtitulo": "Développeur Web | Frontend & Backend",
+    "proyectos.titulo": "Proyectos Personales",
+    "proyectos.primero.titulo": "Projets personnels",
+    "proyectos.primero.descripcion":
+      "Pour un projet de groupe, j'ai créé le site web d'un groupe de radio appelé RapPhone. Nous avons dû utiliser du HTML, du CSS et du JS vanille. Le point fort était le backend, où nous avons utilisé Firebase's Cloud Funcitons pour faire différentes requêtes à l'API Twitch, Spotify, et utiliser le package NPM de Gemini AI.",
+    "tecnologias.titulo": "Technologies et savoir-faire",
+    "tecnologias.subtituloAstro": "Ce site web!",
+    "mail.titulo": "Email copié dans le presse-papiers",
+    "utils.repositorio": "Dépôt",
+    "utils.despliegue": "Déploiement",
+  },
+  de: {
+    "estudios.titulo": "Studien",
+    "estudios.primero.titulo": "Techniker für Webanwendungsentwicklung",
+    "estudios.primero.lugar": "CPIFP Los Enlaces",
+    "estudios.primero.fechaInicio": "2024",
+    "estudios.primero.fechaFin": "2026",
+    "estudios.segundo.titulo": "Naturwissenschaftlich-technisches abitur", 
+    "estudios.segundo.lugar": "IES Ángel Sanz Briz",
+    "estudios.segundo.fechaInicio": "2022",
+    "estudios.segundo.fechaFin": "2024",
+    "estudios.tercero.titulo": "Realschulabschluss",
+    "estudios.tercero.lugar": "IES Ángel Sanz Briz",
+    "estudios.tercero.fechaInicio": "2018",
+    "estudios.tercero.fechaFin": "2022",
+    "experiencia.titulo": "Berufserfahrung",
+    "experiencia.primero.titulo": "404 | Nicht gefunden",
+    "experiencia.primero.lugar": "vorläufig..",
+    "experiencia.primero.fechaInicio": "20??",
+    "experiencia.primero.fechaFin": "20??",
+    "hero.subtitulo": "Web Entwickler | Frontend & Backend",
+    "proyectos.titulo": "Persönliche Projekte",
+    "proyectos.primero.titulo": "RapPhone Web",
+    "proyectos.primero.descripcion":
+      "Für ein Gruppenprojekt habe ich die Website einer Radiogruppe namens RapPhone erstellt. Wir mussten dafür HTML, CSS und Vanilla JS verwenden. Das Highlight war das Backend, wo wir Firebase's Cloud Funcitons verwendet haben, um verschiedene Anfragen an die Twitch API und Spotify zu stellen und das NPM-Paket von Gemini AI zu verwenden.",
+    "tecnologias.titulo": "Technologien und Know-how",
+    "tecnologias.subtituloAstro": "Diese Website!",
+    "mail.titulo": "Email in die Zwischenablage kopiert",
+    "utils.repositorio": "Repository",
+    "utils.despliegue": "Einsatz",
   },
 } as const;

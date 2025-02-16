@@ -1,6 +1,6 @@
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import { languages } from "../i18n/ui"
+import { languages, images } from "../i18n/ui"
 
 type LanguageKey = keyof typeof languages
 
@@ -50,9 +50,10 @@ const LanguagePicker: React.FC = () => {
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-[var(--white)] bg-[var(--item-bg)] rounded-md hover:bg-[var(--icon-bg)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[ar(--white)] focus-visible:ring-opacity-75"
+          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-[var(--white)] bg-[var(--item-bg)] rounded-md hover:bg-[var(--icon-bg)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[ar(--white)] focus-visible:ring-opacity-75 gap-1 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
+          {selectedLang ? <img src={images[selectedLang]} alt="Flag of country" className="w-5"/> : ''}
           {selectedLang ? languages[selectedLang] : "Choose language"}
           <svg
             className="-mr-1 ml-2 h-5 w-5"
@@ -71,20 +72,23 @@ const LanguagePicker: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-[var(--white)] ring-1 ring-[var(--black)] ring-opacity-5 focus:outline-none">
-          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <div className="z-10 origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-[var(--white)] ring-1 ring-[var(--black)] ring-opacity-5 focus:outline-none">
+          <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {(Object.entries(languages) as [LanguageKey, string][]).map(([lang, label]) => (
               <a
                 key={lang}
                 href={`/${lang}/`}
-                className="block px-4 py-2 text-sm text-[var(--black)]"
+                className="block px-4 py-2 text-sm text-[var(--black)] hover:bg-[var(--subtitle-1)] rounded-md"
                 role="menuitem"
                 onClick={(e) => {
                   e.preventDefault()
                   handleLanguageSelect(lang)
                 }}
               >
-                {label}
+                <div className="flex flex-row items-center gap-1">
+                  <img src={images[lang]} alt="Flag of country" className="w-5"/>
+                  {label}
+                </div>
               </a>
             ))}
           </div>

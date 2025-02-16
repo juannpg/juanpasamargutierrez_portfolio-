@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+
+import Hero from '../../sections/Hero.astro';
+import Informacion from '../../sections/Informacion.astro';
+import Proyectos from '../../sections/Proyectos.astro';
+import Tecnologias from '../../sections/Tecnologias.astro';
+import Footer from '../../sections/Footer.astro';
+---
+
+<Layout>
+  <Hero />
+  <hr class="w-[60vw] border border-[var(--white)] opacity-40"/>
+  <Informacion />
+  <hr class="w-[60vw] border border-[var(--white)] opacity-40 mt-[3vh]"/>
+  <Proyectos />
+  <hr class="w-[60vw] border border-[var(--white)] opacity-40 mt-[3vh]"/>
+  <Tecnologias />
+  <Footer />
+</Layout>
