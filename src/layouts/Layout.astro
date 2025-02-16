@@ -1,5 +1,6 @@
 ---
 import Analytics from '@vercel/analytics/astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 import { getLangFromUrl } from '../i18n/utils';
 
@@ -14,6 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 		<meta name="generator" content={Astro.generator} />
 		<title>Juan Pasamar | Dev</title>
     <Analytics />
+    <SpeedInsights />
 	</head>
 	<body>
 		<slot />
