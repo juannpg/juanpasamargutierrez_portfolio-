@@ -7,12 +7,6 @@ import Informacion from '../sections/Informacion.astro';
 import Proyectos from '../sections/Proyectos.astro';
 import Tecnologias from '../sections/Tecnologias.astro';
 import Footer from '../sections/Footer.astro';
-
-const cookies = Astro.request.headers.get("cookie") || "";
-const match = cookies.match(/preferredLanguage=([^;]+)/);
-const preferredLanguage = match ? decodeURIComponent(match[1]) : "en";
-
-Astro.redirect(`/${preferredLanguage}/`);
 ---
 
 <Layout>
@@ -25,3 +19,14 @@ Astro.redirect(`/${preferredLanguage}/`);
   <Tecnologias />
   <Footer />
 </Layout>
+
+<script>
+  const preferredLanguage = document.cookie
+    .split('; ')
+    .find(row => row.startsWith('preferredLanguage='))
+    ?.split('=')[1];
+
+  if (preferredLanguage) {
+    window.location.href = `/${preferredLanguage}/`;
+  }
+</script>
