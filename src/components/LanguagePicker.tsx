@@ -2,8 +2,6 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { languages, images } from "../i18n/ui"
 
-type LanguageKey = keyof typeof languages
-
 const setCookie = (name: string, value: string): void => {
   const expira = new Date()
   expira.setTime(expira.getTime() + 3650 * 24 * 60 * 60 * 1000)
@@ -12,16 +10,18 @@ const setCookie = (name: string, value: string): void => {
 
 const LanguagePicker: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedLang, setSelectedLang] = useState<LanguageKey | "">("")
-  const dropdownRef = useRef<HTMLDivElement>(null)
+  const [selectedLang, setSelectedLang] = useState<string>("")
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
+
+  const getCookie = (name: string): string | null => {
+    const match: RegExpMatchArray | null = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
+    return match ? match[2] : null;
+  };
 
   useEffect(() => {
-    const preferredLanguage = document.cookie.split("; ").find((row) => row.startsWith("preferredLanguage="))
-    if (preferredLanguage) {
-      const lang = preferredLanguage.split("=")[1] as LanguageKey
-      if (lang in languages) {
-        setSelectedLang(lang)
-      }
+    const lang = getCookie("preferredLanguage");
+    if (lang && lang in languages) {
+      setSelectedLang(lang);
     }
   }, [])
 
@@ -38,11 +38,11 @@ const LanguagePicker: React.FC = () => {
     }
   }, [])
 
-  const handleLanguageSelect = (lang: LanguageKey) => {
+  const handleLanguageSelect = (lang: string) => {
     setSelectedLang(lang)
     setCookie("preferredLanguage", lang)
-    window.location.href = `/${lang}/`
     setIsOpen(false)
+    window.location.href = `/${lang}/`
   }
 
   return (
@@ -53,7 +53,7 @@ const LanguagePicker: React.FC = () => {
           className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-[var(--white)] bg-[var(--item-bg)] rounded-md hover:bg-[var(--icon-bg)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[ar(--white)] focus-visible:ring-opacity-75 gap-1 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {selectedLang ? <img src={images[selectedLang]} alt="Flag of country" className="w-5"/> : ''}
+          {selectedLang ? <img src={images[selectedLang]} alt="Flag of country" className="w-5"/> : null}
           {selectedLang ? languages[selectedLang] : "Choose language"}
           <svg
             className="-mr-1 ml-2 h-5 w-5"
@@ -74,7 +74,7 @@ const LanguagePicker: React.FC = () => {
       {isOpen && (
         <div className="z-10 origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-[var(--white)] ring-1 ring-[var(--black)] ring-opacity-5 focus:outline-none">
           <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            {(Object.entries(languages) as [LanguageKey, string][]).map(([lang, label]) => (
+            {(Object.entries(languages)).map(([lang, label]) => (
               <a
                 key={lang}
                 href={`/${lang}/`}

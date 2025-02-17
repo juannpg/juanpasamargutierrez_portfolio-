@@ -1,16 +1,18 @@
+import { type languagesT, type imagesT } from '../types/i18n'; 
+
 import reinoUnido from '../assets/reino-unido.webp';
 import espana from '../assets/espana.webp';
 import francia from '../assets/francia.webp';
 import alemania from '../assets/alemania.webp';
 
-export const languages = {
+export const languages: languagesT = {
   en: "English",
   es: "Español",
   fr: "Français",
   de: "Deutsch",
 };
 
-export const images = {
+export const images: imagesT = {
   en: reinoUnido.src,
   es: espana.src,
   fr: francia.src,

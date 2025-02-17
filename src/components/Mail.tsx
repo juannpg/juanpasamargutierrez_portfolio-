@@ -2,12 +2,10 @@ import { useState } from 'react';
 import mailIconWhite from '../assets/mail-icon-white.svg';
 import mailIconBlack from '../assets/mail-icon-black.svg';
 
-
-
 export default function Mail({MailTitulo}:{MailTitulo: string}) {
   const [modal, setModal] = useState<boolean>(false);
 
-  function showModal() {
+  function showModal(): void {
     setModal(true);
     setTimeout(() => setModal(false), 3300);
   }
@@ -17,7 +15,7 @@ export default function Mail({MailTitulo}:{MailTitulo: string}) {
       navigator.clipboard.writeText("juanpasamargutierrez@gmail.com")
         .then(() => showModal());
     } else {
-      const textArea = document.createElement("textarea");
+      const textArea: HTMLTextAreaElement = document.createElement("textarea");
       textArea.value = "juanpasamargutierrez@gmail.com";
       document.body.appendChild(textArea);
       textArea.select();

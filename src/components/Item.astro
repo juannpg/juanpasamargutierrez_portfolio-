@@ -1,5 +1,13 @@
 ---
-const { titulo, lugar, fechaInicio, fechaFin, icono }  = Astro.props;
+type Props = {
+  titulo: string;
+  lugar: string;
+  fechaInicio: string;
+  fechaFin: string;
+  icono: string;
+}
+
+const { titulo, lugar, fechaInicio, fechaFin, icono }: Props = Astro.props;
 ---
 
 <div class="md:w-full flex flex-row gap-2 items-center md:rounded-lg md:bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none">

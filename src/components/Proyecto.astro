@@ -1,5 +1,13 @@
 ---
-const { titulo, descripcion, imagen, github, despliege } = Astro.props;
+type Props = {
+  titulo: string;
+  descripcion: string;
+  imagen: string;
+  github: string;
+  despliege: string;
+}
+
+const { titulo, descripcion, imagen, github, despliege }: Props = Astro.props;
 import githubWhite from '../assets/github-icon-white.svg';
 import githubBlack from '../assets/github-icon-black.svg';
 import despliegueIcon from '../assets/despliegue-icon.webp';
