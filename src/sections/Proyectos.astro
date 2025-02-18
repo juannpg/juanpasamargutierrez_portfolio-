@@ -7,7 +7,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<section class="md:w-[66vw] w-[87vw] flex flex-col gap-2">
+<section class="md:w-[66vw] w-[87vw] text-center flex flex-col gap-2">
   <h2 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh]">{t('proyectos.titulo')}</h2>
   <Proyecto titulo={t('proyectos.primero.titulo')} descripcion={t('proyectos.primero.descripcion')} imagen={rapphoneIcon.src} github="https://github.com/juannpg/rapphone" despliege="https://rapphone.vercel.app"/>
 </section>
