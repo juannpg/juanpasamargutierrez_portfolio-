@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://juanpasamargutierrez.dev/</loc>
-        <priority>1.0</priority>
+        <loc>https://www.juanpasamargutierrez.dev/</loc>
     </url>
     <url>
-        <loc>https://juanpasamargutierrez.dev/es/</loc>
-        <priority>0.9</priority>
+        <loc>https://www.juanpasamargutierrez.dev/es/</loc>
     </url>
     <url>
-        <loc>https://juanpasamargutierrez.dev/fr/</loc>
-        <priority>0.9</priority>
+        <loc>https://www.juanpasamargutierrez.dev/fr/</loc>
     </url>
     <url>
-        <loc>https://juanpasamargutierrez.dev/de/</loc>
-        <priority>0.9</priority>
+        <loc>https://www.juanpasamargutierrez.dev/de/</loc>
+    </url>
+      <url>
+        <loc>https://www.juanpasamargutierrez.dev/en/</loc>
     </url>
 </urlset>
