@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /_astro/
+
+# Sitemaps
+Sitemap: https://juanpasamargutierrez.dev/sitemap.xml
