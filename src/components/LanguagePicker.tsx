@@ -45,6 +45,8 @@ const LanguagePicker: React.FC = () => {
     window.location.href = `/${lang}/`
   }
 
+  const defaultLang = Object.keys(languages)[0]
+
   return (
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <div>
@@ -53,8 +55,8 @@ const LanguagePicker: React.FC = () => {
           className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-[var(--white)] bg-[var(--item-bg)] rounded-md hover:bg-[var(--icon-bg)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[ar(--white)] focus-visible:ring-opacity-75 gap-1 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {selectedLang ? <img src={images[selectedLang]} alt="Flag of country" className="w-5"/> : null}
-          {selectedLang ? languages[selectedLang] : "Choose language"}
+          <img src={selectedLang ? images[selectedLang] : images[defaultLang]} alt="Flag of country" className="w-5"/>
+          {selectedLang ? languages[selectedLang] : languages[defaultLang]}
           <svg
             className="-mr-1 ml-2 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
