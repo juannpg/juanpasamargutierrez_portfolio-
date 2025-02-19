@@ -19,9 +19,14 @@ const LanguagePicker: React.FC = () => {
   };
 
   useEffect(() => {
-    const lang = getCookie("preferredLanguage");
-    if (lang && lang in languages) {
-      setSelectedLang(lang);
+    const langCookie = getCookie("preferredLanguage");
+    if (langCookie && langCookie in languages) {
+      setSelectedLang(langCookie);
+    }
+
+    const langUrl = window.location.pathname.split("/")[1];
+    if (langUrl && langUrl in languages) {
+      setSelectedLang(langUrl);
     }
   }, [])
 
