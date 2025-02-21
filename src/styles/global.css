@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background-color: rgb(7, 6, 28);
-  --footer-bg: rgb(2, 2, 8);
+  --background-color: rgb(33, 31, 51);
+  --footer-bg: rgb(28, 28, 49);
 
-  --bg-1: rgb(15, 13, 60);
-
-  --item-bg: #1e2939;
+  --item-bg: rgb(28, 28, 39);
   --icon-bg: #6a7282;
 
   --white: #ffffff;
@@ -15,22 +13,22 @@
   --subtitle-1: #99a1af;
   --subtitle-2: #d1d5dc;
 
-  --star-blue: #64b5f6;
+  --star-blue: #5f809b;
   --star-blue-text: #000000;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: rgb(245, 245, 255); /* Fondo claro */
-    --footer-bg: rgb(230, 230, 245); /* Fondo del footer más oscuro pero claro */
+    --background-color: rgb(245, 245, 255);
+    --footer-bg: rgb(230, 230, 245);
   
-    --item-bg: #e3e8f0; /* Fondo de los ítems en un gris azulado suave */
-    --icon-bg: #8c94a3; /* Color de los íconos en un gris más oscuro */
+    --item-bg: #e3e8f0;
+    --icon-bg: #8c94a3;
   
-    --white: #000000; /* Blanco se mantiene igual */
-    --black: #ffffff; /* Negro se mantiene igual */
+    --white: #000000;
+    --black: #ffffff;
   
-    --subtitle-1: #606974; /* Texto secundario más oscuro para mejor legibilidad en fondo claro */
-    --subtitle-2: #4a5568; /* Texto aún más oscuro para subtítulos destacados */
+    --subtitle-1: #606974;
+    --subtitle-2: #4a5568;
   }
 }

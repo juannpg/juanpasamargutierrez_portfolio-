@@ -4,7 +4,7 @@ import linkedinBlack from '../assets/linkedin-icon-black.svg';
 import githubWhite from '../assets/github-icon-white.svg';
 import githubBlack from '../assets/github-icon-black.svg';
 import Mail from '../components/Mail.tsx';
-
+import ThemeSwitcher from '../components/ThemeSwitcher'
 import LanguagePicker from '../components/LanguagePicker.tsx';
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
@@ -13,7 +13,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="p-10 md:pb-0 gap-3 flex flex-col items-center  bg-[var(--bg-1)] w-full mb:bg-none">
+<section class="p-10 md:pb-0 gap-3 flex flex-col items-center">
+  <ThemeSwitcher client:load />
   <h1 class="text-[var(--white)] text-6xl md:text-7xl">JUAN PASAMAR GUTIÉRREZ</h1>
   <h2 class="text-[var(--subtitle-1)] text-2xl md:text-3xl">{t('hero.subtitulo')}</h2>
 
