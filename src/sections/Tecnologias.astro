@@ -4,7 +4,7 @@ import tailwindIcon from '/src/assets/tailwind-icon.svg'
 import tsIcon from '/src/assets/ts-icon.svg'
 import astroIcon from '/src/assets/astro-icon.svg'
 import reactIcon from '/src/assets/react-icon.svg'
-import firebaseIcon from '/src/assets/firebase-icon.svg'
+import nextIcon from '/src/assets/next-icon.svg'
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
@@ -14,8 +14,8 @@ const t = useTranslations(lang);
 <section class="flex flex-col text-center gap-2 md:w-[66vw] w-[87vw]">
   <h2 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh]">{t('tecnologias.titulo')}</h2>
   <div class="md:grid md:grid-cols-2 md:gap-2 justify-center w-full items-center">
-    <Tecnologia nombre="Next" icono={firebaseIcon.src}/>
     <Tecnologia nombre="React" icono={reactIcon.src}/>
+    <Tecnologia nombre="Next" icono={nextIcon.src}/>
     <Tecnologia nombre="Astro" icono={astroIcon.src} subtitulo={t('tecnologias.subtituloAstro')} repositorio="https://github.com/juannpg/juanpasamargutierrez_portfolio-"/>
     <Tecnologia nombre="Tailwind CSS" icono={tailwindIcon.src}/>
     <Tecnologia nombre="Typescript" icono={tsIcon.src}/>
