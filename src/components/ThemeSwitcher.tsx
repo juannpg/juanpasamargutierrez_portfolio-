@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTheme } from '../hooks/useTheme';
 
 export default function ThemeSwitcher() {
@@ -7,7 +6,7 @@ export default function ThemeSwitcher() {
   return (
     <button 
       onClick={toggleTheme} 
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-200"
+      className="p-2 rounded-full bg-[var(--theme-switcher-color)] dark:bg-[var(--theme-switcher-bg)] text-[var(--theme-switcher-bg)] dark:text-[var(--theme-switcher-color)] transition-colors duration-200"
       aria-label="Cambiar tema"
     >
       {isDark ? (

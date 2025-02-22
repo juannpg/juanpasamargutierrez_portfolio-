@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
 :root {
+  --background-color: rgb(245, 245, 255);
+  --footer-bg: rgb(230, 230, 245);
+
+  --item-bg: #e3e8f0;
+  --icon-bg: #8c94a3;
+
+  --white: #000000;
+  --black: #ffffff;
+
+  --subtitle-1: #606974;
+  --subtitle-2: #4a5568;
+
+  --theme-switcher-bg: #e5e7eb;
+  --theme-switcher-color: #1e2939;
+}
+
+.dark {
   --background-color: rgb(33, 31, 51);
   --footer-bg: rgb(28, 28, 49);
 
@@ -15,20 +32,7 @@
 
   --star-blue: #7ca7ca;
   --star-blue-text: #000000;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: rgb(245, 245, 255);
-    --footer-bg: rgb(230, 230, 245);
-  
-    --item-bg: #e3e8f0;
-    --icon-bg: #8c94a3;
-  
-    --white: #000000;
-    --black: #ffffff;
-  
-    --subtitle-1: #606974;
-    --subtitle-2: #4a5568;
-  }
+  --theme-switcher-bg: #1e2939;
+  --theme-switcher-color: #e5e7eb;
 }

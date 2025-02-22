@@ -7,6 +7,8 @@ import Informacion from '../sections/Informacion.astro';
 import Proyectos from '../sections/Proyectos.astro';
 import Tecnologias from '../sections/Tecnologias.astro';
 import Footer from '../sections/Footer.astro';
+
+import ThemeSwitcher from '../components/ThemeSwitcher.tsx';
 ---
 
 <Layout>
@@ -18,6 +20,9 @@ import Footer from '../sections/Footer.astro';
   <hr class="w-[60vw] border border-[var(--white)] opacity-40 mt-[3vh]"/>
   <Tecnologias />
   <Footer />
+  <div class="fixed bottom-10 right-10 z-60">
+    <ThemeSwitcher client:load />
+  </div>
 </Layout>
 
 <script>

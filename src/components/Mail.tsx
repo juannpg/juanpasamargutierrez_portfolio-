@@ -35,12 +35,12 @@ export default function Mail({MailTitulo}:{MailTitulo: string}) {
         <p>{MailTitulo}</p>
       </div>
       
-      <picture>
-        <source srcSet={mailIconWhite.src} media="(prefers-color-scheme: dark)" />
-        <img role="button" tabIndex={0} src={mailIconBlack.src} alt="Mail Icon" className="w-11 cursor-pointer"
-          onClick={copiarEmail}
-        />
-      </picture>
+      <img role="button" tabIndex={0} src={mailIconBlack.src} alt="Mail Icon" className="w-11 cursor-pointer mailHeroBlack hidden"
+        onClick={copiarEmail}
+      />
+      <img role="button" tabIndex={0} src={mailIconWhite.src} alt="Mail Icon" className="w-11 cursor-pointer mailHeroWhite"
+        onClick={copiarEmail}
+      />
     </>
   );
 }

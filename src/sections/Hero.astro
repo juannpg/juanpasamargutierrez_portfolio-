@@ -4,7 +4,6 @@ import linkedinBlack from '../assets/linkedin-icon-black.svg';
 import githubWhite from '../assets/github-icon-white.svg';
 import githubBlack from '../assets/github-icon-black.svg';
 import Mail from '../components/Mail.tsx';
-import ThemeSwitcher from '../components/ThemeSwitcher'
 import LanguagePicker from '../components/LanguagePicker.tsx';
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
@@ -14,25 +13,20 @@ const t = useTranslations(lang);
 ---
 
 <section class="p-10 md:pb-0 gap-3 flex flex-col items-center">
-  <ThemeSwitcher client:load />
   <h1 class="text-[var(--white)] text-6xl md:text-7xl">JUAN PASAMAR GUTIÉRREZ</h1>
   <h2 class="text-[var(--subtitle-1)] text-2xl md:text-3xl">{t('hero.subtitulo')}</h2>
 
   <div class="flex flex-row justify-center items-center gap-2">
     <a href="https://www.linkedin.com/in/juan-pasamar-guti%C3%A9rrez-273b4b335/" rel="noopener" target="_blank">
-      <picture>
-        <source srcset={linkedinWhite.src} media="(prefers-color-scheme: dark)" />
-        <img src={linkedinBlack.src} alt="Linkedin Icon" class="w-11"/>
-      </picture>
+      <img src={linkedinBlack.src} alt="Linkedin Icon" class="w-11 linkedinHeroBlack hidden"/>
+      <img src={linkedinWhite.src} alt="Linkedin Icon" class="w-11 linkedinHeroWhite"/>
     </a>
 
     <Mail client:load MailTitulo={t('mail.titulo')}/>
 
     <a href="https://github.com/juannpg" rel="noopener" target="_blank">
-      <picture>
-        <source srcset={githubWhite.src} media="(prefers-color-scheme: dark)" />
-        <img src={githubBlack.src} alt="Github Icon" class="w-11"/>
-      </picture>
+      <img src={githubBlack.src} alt="Github Icon" class="w-11 githubHeroBlack hidden"/>
+      <img src={githubWhite.src} alt="Github Icon" class="w-11 githubHeroWhite"/>
     </a>
   </div>
   <!-- UI done with v0.dev -->
