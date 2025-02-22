@@ -24,10 +24,8 @@ const t = useTranslations(lang);
       <p class="text-[var(--subtitle-1)] text-md">{subtitulo}</p>
     </div>
     {repositorio && <a href={repositorio} class="absolute md:right-2 right-4 h-11 flex flex-row gap-1 items-center bg-[var(--white)] p-2 rounded-lg cursor-pointer" rel="noopener" target="_blank">
-      <picture>
-        <source srcset={githubBlack.src} media="(prefers-color-scheme: dark)" />
-        <img src={githubWhite.src} alt="Icono" class="h-5"/>
-      </picture>
+      <img src={githubWhite.src} alt="Icono" class="h-5 githubBlack"/>
+      <img src={githubBlack.src} alt="Icono" class="h-5 githubWhite hidden"/>
       <span class="hidden lg:inline text-[var(--black)]">{t('utils.repositorio')}</span>
     </a>}
   </div>

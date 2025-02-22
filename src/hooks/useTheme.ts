@@ -43,8 +43,8 @@ export const useTheme = () => {
     document.querySelectorAll(`.mailHero${classPrefix}`).forEach(el => el.classList.remove('hidden'));
     document.querySelectorAll(`.mailHero${oppositePrefix}`).forEach(el => el.classList.add('hidden'));
 
-    document.querySelectorAll(`.githubHero${classPrefix}`).forEach(el => el.classList.remove('hidden'));
-    document.querySelectorAll(`.githubHero${oppositePrefix}`).forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll(`.github${classPrefix}`).forEach(el => el.classList.remove('hidden'));
+    document.querySelectorAll(`.github${oppositePrefix}`).forEach(el => el.classList.add('hidden'));
   };
 
   const toggleTheme = () => setIsDark(prev => !prev);
