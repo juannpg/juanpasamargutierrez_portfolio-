@@ -19,9 +19,9 @@ const t = useTranslations(lang);
 <div class="w-full relative flex flex-row gap-2 items-center md:rounded-lg md:bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none">
   <img src={icono} alt="Icono" class="h-14 bg-[var(--icon-bg)] rounded-sm"/>
   <div class="flex flex-row items-center text-left">
-    <div>
+    <div class="flex flex-row items-center gap-2">
       <h2 class="text-[var(--white)] text-2xl">{nombre}</h2>
-      <p class="text-[var(--subtitle-1)] text-sm">{subtitulo}</p>
+      <p class="text-[var(--subtitle-1)] text-md">{subtitulo}</p>
     </div>
     {repositorio && <a href={repositorio} class="absolute md:right-2 right-4 h-11 flex flex-row gap-1 items-center bg-[var(--white)] p-2 rounded-lg cursor-pointer" rel="noopener" target="_blank">
       <picture>

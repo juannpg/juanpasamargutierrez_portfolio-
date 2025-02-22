@@ -41,7 +41,7 @@ export const ui = {
     "experiencia.primero.lugar": "for now...",
     "experiencia.primero.fechaInicio": "20??",
     "experiencia.primero.fechaFin": "20??",
-    "hero.subtitulo": "Web Developer | Frontend & Backend",
+    "hero.subtitulo": "Frontend Web Developer",
     "proyectos.titulo": "Personal Projects",
     "proyectos.primero.titulo": "RapPhone Web",
     "proyectos.primero.descripcion":
@@ -71,7 +71,7 @@ export const ui = {
     "experiencia.primero.lugar": "por ahora...",
     "experiencia.primero.fechaInicio": "20??",
     "experiencia.primero.fechaFin": "20??",
-    "hero.subtitulo": "Desarrollador Web | Frontend & Backend",
+    "hero.subtitulo": "Desarrollador Frontend",
     "proyectos.titulo": "Proyectos Personales",
     "proyectos.primero.titulo": "RapPhone Web",
     "proyectos.primero.descripcion":
@@ -101,7 +101,7 @@ export const ui = {
     "experiencia.primero.lugar": "pour le moment...",
     "experiencia.primero.fechaInicio": "20??",
     "experiencia.primero.fechaFin": "20??",
-    "hero.subtitulo": "Développeur Web | Frontend & Backend",
+    "hero.subtitulo": "Développeur Frontend",
     "proyectos.titulo": "Proyectos Personales",
     "proyectos.primero.titulo": "Projets personnels",
     "proyectos.primero.descripcion":
@@ -131,7 +131,7 @@ export const ui = {
     "experiencia.primero.lugar": "vorläufig..",
     "experiencia.primero.fechaInicio": "20??",
     "experiencia.primero.fechaFin": "20??",
-    "hero.subtitulo": "Web Entwickler | Frontend & Backend",
+    "hero.subtitulo": "Frontend-Webentwickler",
     "proyectos.titulo": "Persönliche Projekte",
     "proyectos.primero.titulo": "RapPhone Web",
     "proyectos.primero.descripcion":
