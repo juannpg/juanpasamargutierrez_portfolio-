@@ -12,17 +12,25 @@ const getCookie = (name: string): string | null => {
 };
 
 export const useTheme = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean | null>(null);
 
   useEffect(() => {
     const storedTheme = getCookie("preferredTheme");
-    setIsDark(storedTheme === "dark");
+
+    if (storedTheme) {
+      setIsDark(storedTheme === "dark");
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setIsDark(prefersDark);
+    }
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
-    updateVisibility(isDark);
-    setCookie("preferredTheme", isDark ? "dark" : "light");
+    if (isDark !== null) {
+      document.documentElement.classList.toggle('dark', isDark);
+      updateVisibility(isDark);
+      setCookie("preferredTheme", isDark ? "dark" : "light");
+    }
   }, [isDark]);
 
   const updateVisibility = (isDark: boolean) => {
