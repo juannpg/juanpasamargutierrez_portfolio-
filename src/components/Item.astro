@@ -5,16 +5,17 @@ type Props = {
   fechaInicio?: string;
   fechaFin?: string;
   icono?: string;
+  link?: string;
 }
 
-const { titulo, lugar, fechaInicio, fechaFin, icono }: Props = Astro.props;
+const { titulo, lugar, fechaInicio, fechaFin, icono, link }: Props = Astro.props;
 ---
 
-<div class="md:w-full flex flex-row gap-2 items-center md:rounded-lg md:bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none">
+<a class="md:w-full flex flex-row gap-2 items-center md:rounded-lg md:bg-[var(--item-bg)] p-4 md:p-2 border-b border-[var(--white)] last:border-none md:border-none" href={link} rel="noopener" target="_blank">
   <img src={icono} alt="Icono" class="rounded-sm bg-[var(--icon-bg)] h-18 p-1"/>
   <div class="flex flex-col text-left">
     <h2 class="text-[var(--white)] text-lg md:text-2xl">{titulo}</h2>
     <p class="text-[var(--subtitle-1)] text-md">{lugar}</p>
     <p class="text-[var(--subtitle-2)] text-md">{fechaInicio} - {fechaFin}</p>
   </div>
-</div>
+</a>

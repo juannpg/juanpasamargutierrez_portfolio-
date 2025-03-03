@@ -10,7 +10,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 <section class="w-full flex flex-col text-center md:gap-2">
-  <h2 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh]">{t('estudios.titulo')}</h2>
+  <h2 class="text-[var(--white)] text-3xl md:text-4xl mb-[5vh] md:mb-0 md:text-left">{t('estudios.titulo')}</h2>
   <div class="flex flex-col md:gap-2">
     <Item titulo={t('estudios.primero.titulo')} lugar={t('estudios.primero.lugar')} fechaInicio={t('estudios.primero.fechaInicio')} fechaFin={t('estudios.primero.fechaFin')} icono={dawIcon.src}/>
     <Item titulo={t('estudios.segundo.titulo')} lugar={t('estudios.segundo.lugar')} fechaInicio={t('estudios.segundo.fechaInicio')} fechaFin={t('estudios.segundo.fechaFin')} icono={bachiIcon.src}/>
