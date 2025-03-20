@@ -1,9 +1,9 @@
-import { type languagesT, type imagesT } from '../types/i18n'; 
+import { type languagesT, type imagesT } from "../types/i18n";
 
-import reinoUnido from '../assets/reino-unido.webp';
-import espana from '../assets/espana.webp';
-import francia from '../assets/francia.webp';
-import alemania from '../assets/alemania.webp';
+import reinoUnido from "../assets/reino-unido.webp";
+import espana from "../assets/espana.webp";
+import francia from "../assets/francia.webp";
+import alemania from "../assets/alemania.webp";
 
 export const languages: languagesT = {
   en: "English",
@@ -17,7 +17,7 @@ export const images: imagesT = {
   es: espana.src,
   fr: francia.src,
   de: alemania.src,
-}
+};
 
 export const defaultLang = "en";
 
@@ -39,7 +39,7 @@ export const ui = {
     "experiencia.titulo": "Experience",
     "experiencia.primero.titulo": "Mobile Developer",
     "experiencia.primero.lugar": "Goated",
-    "experiencia.primero.fechaInicio": "2024",
+    "experiencia.primero.fechaInicio": "2025",
     "experiencia.primero.fechaFin": "present",
     "hero.subtitulo": "Frontend Web Developer",
     "proyectos.titulo": "Personal Projects",
@@ -69,7 +69,7 @@ export const ui = {
     "experiencia.titulo": "Experiencia",
     "experiencia.primero.titulo": "Desarrollador Mobile",
     "experiencia.primero.lugar": "Goated",
-    "experiencia.primero.fechaInicio": "2024",
+    "experiencia.primero.fechaInicio": "2025",
     "experiencia.primero.fechaFin": "actualidad",
     "hero.subtitulo": "Desarrollador Frontend",
     "proyectos.titulo": "Proyectos Personales",
@@ -99,7 +99,7 @@ export const ui = {
     "experiencia.titulo": "Expérience",
     "experiencia.primero.titulo": "Développeur Mobile",
     "experiencia.primero.lugar": "Goated",
-    "experiencia.primero.fechaInicio": "2024",
+    "experiencia.primero.fechaInicio": "2025",
     "experiencia.primero.fechaFin": "présent",
     "hero.subtitulo": "Développeur Frontend",
     "proyectos.titulo": "Proyectos Personales",
@@ -118,7 +118,7 @@ export const ui = {
     "estudios.primero.lugar": "CPIFP Los Enlaces",
     "estudios.primero.fechaInicio": "2024",
     "estudios.primero.fechaFin": "2026",
-    "estudios.segundo.titulo": "Naturwissenschaftlich-technisches abitur", 
+    "estudios.segundo.titulo": "Naturwissenschaftlich-technisches abitur",
     "estudios.segundo.lugar": "IES Ángel Sanz Briz",
     "estudios.segundo.fechaInicio": "2022",
     "estudios.segundo.fechaFin": "2024",
@@ -129,7 +129,7 @@ export const ui = {
     "experiencia.titulo": "Berufserfahrung",
     "experiencia.primero.titulo": "Mobileentwickler",
     "experiencia.primero.lugar": "Goated",
-    "experiencia.primero.fechaInicio": "2024",
+    "experiencia.primero.fechaInicio": "2025",
     "experiencia.primero.fechaFin": "gegenwärtig",
     "hero.subtitulo": "Frontend-Webentwickler",
     "proyectos.titulo": "Persönliche Projekte",
